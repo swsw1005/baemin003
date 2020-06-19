@@ -779,13 +779,10 @@
 		});
 		// 스크립트
 		//데이터를 변경하는 함수 -update	
-		$("#add_menu_btn")
-				.click(
+		$("#add_menu_btn").click(
 						function() {
-							var menuName = $(":input:text[name=menuName]")
-									.val();
-							var menuCategory = $(
-									":input:text[name=menuCategory]").val();
+							var menuName = $(":input:text[name=menuName]").val();
+							var menuCategory = $(":input:text[name=menuCategory]").val();
 							//var menuEx = $(":input:text[name=menuEx]").val();
 							var menuEx = $("#menuEx2").val();
 							var menuPrice = $(":input:text[name=menuPrice]")
@@ -811,13 +808,10 @@
 										contentType : "application/x-www-form-urlencoded; charset=utf-8",
 										success : function(result, status, xhr) {
 											console.log("메뉴추가 완료");
-											$(":input:text[name=menuName]")
-													.val("");
-											$(":input:text[name=menuCategory]")
-													.val("");
+											$(":input:text[name=menuName]").val("");
+											$(":input:text[name=menuCategory]").val("");
 											$("#menuEx2").val("");
-											$(":input:text[name=menuPrice]")
-													.val("");
+											$(":input:text[name=menuPrice]").val("");
 										},
 										error : function(xhr, status, error) {
 											console.log("메뉴추가 실패");
